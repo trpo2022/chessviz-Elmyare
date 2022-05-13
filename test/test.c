@@ -12,39 +12,46 @@ CTEST(move, move_figure)
     table_fill(board);
     int first_crd, second_crd;
     get_coordinates(&first_crd, &second_crd, "a2-a4");
-    int needed_result = (int)FIRST_CELL.figure+FIRST_CELL.color*100; //100 to check color too actually
+    int needed_result = (int)FIRST_CELL.figure
+            + FIRST_CELL.color * 100; // 100 to check color too actually
     move(board, "a2-a4");
-    int actual_result = (int)SECOND_CELL.figure+SECOND_CELL.color*100; //again
+    int actual_result
+            = (int)SECOND_CELL.figure + SECOND_CELL.color * 100; // again
     ASSERT_EQUAL(needed_result, actual_result);
 
     get_coordinates(&first_crd, &second_crd, "e7-e5");
-    needed_result = (int)FIRST_CELL.figure+FIRST_CELL.color*100; //100 to check color too actually
+    needed_result = (int)FIRST_CELL.figure
+            + FIRST_CELL.color * 100; // 100 to check color too actually
     move(board, "e7-e5");
-    actual_result = (int)SECOND_CELL.figure+SECOND_CELL.color*100; //again
+    actual_result = (int)SECOND_CELL.figure + SECOND_CELL.color * 100; // again
     ASSERT_EQUAL(needed_result, actual_result);
 
     get_coordinates(&first_crd, &second_crd, "e2-e4");
-    needed_result = (int)FIRST_CELL.figure+FIRST_CELL.color*100; //100 to check color too actually
+    needed_result = (int)FIRST_CELL.figure
+            + FIRST_CELL.color * 100; // 100 to check color too actually
     move(board, "e2-e4");
-    actual_result = (int)SECOND_CELL.figure+SECOND_CELL.color*100; //again
+    actual_result = (int)SECOND_CELL.figure + SECOND_CELL.color * 100; // again
     ASSERT_EQUAL(needed_result, actual_result);
 
     get_coordinates(&first_crd, &second_crd, "a7-a5");
-    needed_result = (int)FIRST_CELL.figure+FIRST_CELL.color*100; //100 to check color too actually
+    needed_result = (int)FIRST_CELL.figure
+            + FIRST_CELL.color * 100; // 100 to check color too actually
     move(board, "a7-a5");
-    actual_result = (int)SECOND_CELL.figure+SECOND_CELL.color*100; //again
+    actual_result = (int)SECOND_CELL.figure + SECOND_CELL.color * 100; // again
     ASSERT_EQUAL(needed_result, actual_result);
 
     get_coordinates(&first_crd, &second_crd, "b2-b3");
-    needed_result = (int)FIRST_CELL.figure+FIRST_CELL.color*100; //100 to check color too actually
+    needed_result = (int)FIRST_CELL.figure
+            + FIRST_CELL.color * 100; // 100 to check color too actually
     move(board, "b2-b3");
-    actual_result = (int)SECOND_CELL.figure+SECOND_CELL.color*100; //again
+    actual_result = (int)SECOND_CELL.figure + SECOND_CELL.color * 100; // again
     ASSERT_EQUAL(needed_result, actual_result);
 
     get_coordinates(&first_crd, &second_crd, "a8-a6");
-    needed_result = (int)FIRST_CELL.figure+FIRST_CELL.color*100; //100 to check color too actually
+    needed_result = (int)FIRST_CELL.figure
+            + FIRST_CELL.color * 100; // 100 to check color too actually
     move(board, "a8-a6");
-    actual_result = (int)SECOND_CELL.figure+SECOND_CELL.color*100; //again
+    actual_result = (int)SECOND_CELL.figure + SECOND_CELL.color * 100; // again
     ASSERT_EQUAL(needed_result, actual_result);
 }
 
