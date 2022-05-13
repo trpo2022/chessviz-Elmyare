@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <string.h>
 
+void get_coordinates(
+        int* first_cell, int* second_cell, const char figure_step[5]);
+
 void table_print(table board)
 {
     int i, j;
@@ -41,8 +44,8 @@ void table_fill(table board)
 
 void move(table board, const char figure_step[5])
 {
-    int cell_1 = (figure_step[0] - 'a') + ((8 - (figure_step[1] - '0')) * 8);
-    int cell_2 = (figure_step[3] - 'a') + ((8 - (figure_step[4] - '0')) * 8);
+    int cell_1, cell_2;
+    get_coordinates(&cell_1, &cell_2, figure_step);
     // printf("%d %d\n", cell_1, cell_2);
     int buf_color = board[cell_1].color;
     char buf_figure = board[cell_1].figure;
@@ -62,4 +65,11 @@ int check_input(const char figure_step[5])
         result = 1;
     }
     return result;
+}
+
+void get_coordinates(
+        int* first_cell, int* second_cell, const char figure_step[5])
+{
+    *first_cell = (figure_step[0] - 'a') + ((8 - (figure_step[1] - '0')) * 8);
+    *second_cell = (figure_step[3] - 'a') + ((8 - (figure_step[4] - '0')) * 8);
 }
