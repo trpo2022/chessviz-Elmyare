@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
-void get_coordinates(int *first_cell, int *second_cell, const char figure_step[5]);
+void get_coordinates(
+        int* first_cell, int* second_cell, const char figure_step[5]);
 
 void table_print(table board)
 {
@@ -66,7 +67,8 @@ int check_input(const char figure_step[5])
     return result;
 }
 
-void get_coordinates(int *first_cell, int *second_cell, const char figure_step[5])
+void get_coordinates(
+        int* first_cell, int* second_cell, const char figure_step[5])
 {
     *first_cell = (figure_step[0] - 'a') + ((8 - (figure_step[1] - '0')) * 8);
     *second_cell = (figure_step[3] - 'a') + ((8 - (figure_step[4] - '0')) * 8);
