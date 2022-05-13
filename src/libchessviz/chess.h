@@ -18,6 +18,7 @@ void move(table board, const char figure_step[5]);
 
 int check_input(const char figure_step[5]);
 
-void get_coordinates(int *first_cell, int *second_cell, const char figure_step[5]);
+void get_coordinates(
+        int* first_cell, int* second_cell, const char figure_step[5]);
 
 #endif
